@@ -1,23 +1,28 @@
 <html>
 
 <head>
-<meta charset="UTF-8" />
+    <meta charset="UTF-8" />
 
 </head>
+
 <body>
     <div id="app">
-        this is a  test.
+        this is a test.
+        <br> {{ message + '1234'}}
         <br>
-        {{ message}}
+        <span v-bind:title="date">마우스를 가까이 자져오세요.</span>
+        <!--//이건좀 신기한 기능-->
     </div>
     <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue/js"></script>
-<script>
-const myApp = new Vue({
-    el: '#app', //html에서 id를 app로 접근 필요!
-    data: {
-        message: 'Hello html'        
-    }
-});
-</script>
+    <script>
+        const myApp = new Vue({
+            el: '#app', //html에서 id를 app로 접근 필요!
+            data: {
+                message: 'Hello html',
+                date: '오늘 날짜:' + new Date().toLocaleString()
+            }
+        });
+    </script>
 </body>
+
 </html>
