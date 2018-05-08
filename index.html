@@ -1,0 +1,23 @@
+<html>
+
+<head>
+<meta charset="UTF-8" />
+
+</head>
+<body>
+    <div id="app">
+        this is a  test.
+        <br>
+        {{ message}}
+    </div>
+    <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue/js"></script>
+<script>
+const myApp = new Vue({
+    el: '#app', //html에서 id를 app로 접근 필요!
+    data: {
+        message: 'Hello html'        
+    }
+});
+</script>
+</body>
+</html>
